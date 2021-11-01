@@ -70,7 +70,7 @@ router.get("/find/:id", async (req, res) => {
 
 //get random
 
-router.get("/random", async (req, res) => {
+router.get("/random", verify, async (req, res) => {
   const type = req.query.type;
   let movie;
   try {

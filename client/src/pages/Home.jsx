@@ -3,12 +3,12 @@ import NavBar from "../components/NavBar";
 import List from "../components/List";
 import "../styles/home.scss";
 
-export default function Home() {
+export default function Home({ type }) {
   return (
     <div className="home">
       <NavBar />
 
-      <Featured type="movie" />
+      <Featured type={type} />
 
       <List />
       <List />

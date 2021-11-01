@@ -49,7 +49,7 @@ router.delete("/:id", verify, async (req, res) => {
 
 //get
 
-router.get("/find/:id", async (req, res) => {
+router.get("/find/:id",verify, async (req, res) => {
   try {
     const user = await User.findById(req.params.id);
 
@@ -84,7 +84,7 @@ router.get("/", verify, async (req, res) => {
 
 //get users stats
 
-router.get("/stats", async (req, res) => {
+router.get("/stats",verify, async (req, res) => {
   const today = new Date();
   const lastYear = today.setFullYear(today.setFullYear() - 1);
 
